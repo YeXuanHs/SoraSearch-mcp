@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.venv/
+venv/
+.env
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Playwright persistent browser profile (local session trust, never commit)
+sora_profile/
+*-profile/
+pw_profile/
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# local probe / debug dumps
+*_probe*.html
+*_probe*.txt
+*_live*.txt
+*_live*.json
+debug_*.html
