@@ -86,7 +86,11 @@ async def baidu_next(query: str, page: int, pages: int = 1, backend: str = "auto
 
 
 def main() -> None:
-    server.run(transport="stdio")
+    try:
+        server.run(transport="stdio")
+    except KeyboardInterrupt:
+        # Ctrl+C / stdin 关闭时的正常退出：静默返回 0，不要打 traceback
+        pass
 
 
 if __name__ == "__main__":
